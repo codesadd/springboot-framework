@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: OnlinePaymentService
+logging:
+  level:
+    org:
+      hibernate: error
+      springframework: error
+server:
+  port: 8081
