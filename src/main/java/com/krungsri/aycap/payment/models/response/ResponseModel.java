@@ -1,4 +1,4 @@
-package com.krungsri.aycap.payment.models;
+package com.krungsri.aycap.payment.models.response;
 
 import lombok.Data;
 

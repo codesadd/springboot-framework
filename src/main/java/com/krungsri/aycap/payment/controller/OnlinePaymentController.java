@@ -1,7 +1,7 @@
 package com.krungsri.aycap.payment.controller;
 
-import com.krungsri.aycap.payment.models.RequestModel;
-import com.krungsri.aycap.payment.models.ResponseModel;
+import com.krungsri.aycap.payment.models.request.RequestModel;
+import com.krungsri.aycap.payment.models.response.ResponseModel;
 import com.krungsri.aycap.payment.services.OnlinePaymentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

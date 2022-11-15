@@ -5,9 +5,9 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.Executors;
 
-import com.krungsri.aycap.payment.db.repository.TransactionPaymentRepository;
-import com.krungsri.aycap.payment.models.RequestModel;
-import com.krungsri.aycap.payment.models.ResponseModel;
+import com.krungsri.aycap.payment.models.request.RequestModel;
+import com.krungsri.aycap.payment.models.response.ResponseModel;
+import com.krungsri.aycap.payment.repository.TransactionPaymentRepository;
 import com.krungsri.aycap.payment.services.OnlinePaymentService;
 
 import org.assertj.core.api.Assertions;

@@ -1,8 +1,9 @@
-package com.krungsri.aycap.payment.db.repository;
+package com.krungsri.aycap.payment.repository;
 
-import com.krungsri.aycap.payment.db.entity.TransactionPaymentEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import com.krungsri.aycap.payment.models.entity.TransactionPaymentEntity;
 
 @Repository
 public interface TransactionPaymentRepository extends JpaRepository<TransactionPaymentEntity, Long> {

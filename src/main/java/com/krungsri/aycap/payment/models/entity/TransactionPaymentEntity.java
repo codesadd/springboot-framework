@@ -1,4 +1,4 @@
-package com.krungsri.aycap.payment.db.entity;
+package com.krungsri.aycap.payment.models.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

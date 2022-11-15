@@ -1,8 +1,9 @@
 package com.krungsri.aycap.payment.services;
 
-import com.krungsri.aycap.payment.db.entity.TransactionPaymentEntity;
-import com.krungsri.aycap.payment.db.repository.TransactionPaymentRepository;
-import com.krungsri.aycap.payment.models.ResponseModel;
+import com.krungsri.aycap.payment.models.entity.TransactionPaymentEntity;
+import com.krungsri.aycap.payment.models.response.ResponseModel;
+import com.krungsri.aycap.payment.repository.TransactionPaymentRepository;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
