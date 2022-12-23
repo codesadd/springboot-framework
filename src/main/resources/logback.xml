@@ -1,10 +1,23 @@
 <configuration>
     # Console appender
-    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
-        <layout class="ch.qos.logback.classic.PatternLayout">
-            # Pattern of log message for console appender
-            <Pattern>%d{yyyy-MM-dd HH:mm:ss} | [%thread] | %-5level | %logger{36} | %M | - %msg%n</Pattern>
-        </layout>
+<!--    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">-->
+<!--        <layout class="ch.qos.logback.classic.PatternLayout">-->
+<!--            # Pattern of log message for console appender-->
+<!--            <Pattern>%d{yyyy-MM-dd HH:mm:ss} | [%thread] | %-5level | %logger{36} | %M | - %msg%n</Pattern>-->
+<!--        </layout>-->
+<!--    </appender>-->
+    <appender name="mask" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="com.krungsri.aycap.payment.util.MaskingPatternLayout">
+                <maskPattern>\"address\"\s*:\s*\"(.*?)\"</maskPattern> <!-- Address JSON pattern -->
+                <maskPattern>\"ip_address\"\s*:\"(\d+)\.(\d+)\.(\d+)\.(\d+)\"</maskPattern> <!-- Ip address IPv4 pattern -->
+                <maskPattern>\"email_id\"\s*:\"(\w+)(\@\w+\.\w+)\"</maskPattern> <!-- Email pattern -->
+                <maskPattern>\"cardNo\"\s*:\"(\d{6})(\d{6})(\d{4})\"</maskPattern> <!-- Ip address IPv4 pattern -->
+                <maskPattern>\"firstName\"\s*:\"(\w+)\"</maskPattern> <!-- Ip address IPv4 pattern -->
+                <maskPattern>\"lastName\"\s*:\"(\w+)\"</maskPattern> <!-- Ip address IPv4 pattern -->
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} | [%thread] | %-5level | %logger{36} | %M | - %m%n</Pattern>
+            </layout>
+        </encoder>
     </appender>
 
     # File appender
@@ -23,7 +36,7 @@
     </appender>
 
     <root level="INFO">
-        <appender-ref ref="stdout"/>
+        <appender-ref ref="mask"/>
         <appender-ref ref="roll-by-time"/>
     </root>
 </configuration>
